@@ -36,7 +36,7 @@ h1, h2, h3 {
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-ow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -64,16 +64,14 @@ h1, h2, h3 {
 
 /* Hero Section
    Replace the background image with a gradient so the site
-   remains fully self contained (no external images). The gradient
+   remains fully self‑contained (no external images). The gradient
    blends teal and purple hues to mirror the visual theme used
    throughout the site. Because we no longer have a background
-   image overlay, the ::after pseudo‟element is removed. */
+   image overlay, the ::after pseudo‑element is removed. */
 .hero {
   height: 100vh;
-  /* Use a diagonal gradient for a modern, dynamic f);
-  
+  /* Use a diagonal gradient for a modern, dynamic feel */
   background: linear-gradient(135deg, #4a69bd 0%, #6c5ce7 100%);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,6 +254,67 @@ h1, h2, h3 {
   padding: 20px;
   background-color: #1f2452;
   color: #fff;
+}
+
+/* Highlights & Focus and other simple list sections */
+.highlights ul,
+.focus ul,
+.lab-skills ul,
+.communication ul,
+.looking-for ul,
+.tools ul {
+  list-style: disc inside;
+  margin: 0 auto;
+  max-width: 800px;
+  color: #444;
+}
+
+/* Portfolio (Medical Editing & Writing) */
+.portfolio .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.portfolio .card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .card h4 {
+  font-size: 1.1rem;
+  color: #4a69bd;
+  margin-bottom: 8px;
+}
+
+.portfolio .card .tag {
+  display: inline-block;
+  background-color: #e9edfc;
+  color: #4a69bd;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-right: 5px;
+}
+
+.portfolio .card a {
+  color: #4a69bd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.portfolio .card a:hover {
+  text-decoration: underline;
+}
+
+.portfolio h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #1f2452;
 }
 
 /* Responsive design */
