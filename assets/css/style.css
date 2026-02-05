@@ -1,0 +1,278 @@
+/*
+  Custom stylesheet for Ayushi Vaghela’s portfolio website.
+  The design uses a teal–purple colour palette inspired by
+  scientific visuals. Sections are spaced to read like a
+  narrative pitch, guiding visitors from introduction through
+  experience, projects and education to clear contact details.
+*/
+
+/* Basic reset and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fb;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #1f2452;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-ow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a69bd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2452;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4a69bd;
+}
+
+/* Hero Section
+   Replace the background image with a gradient so the site
+   remains fully self contained (no external images). The gradient
+   blends teal and purple hues to mirror the visual theme used
+   throughout the site. Because we no longer have a background
+   image overlay, the ::after pseudo‟element is removed. */
+.hero {
+  height: 100vh;
+  /* Use a diagonal gradient for a modern, dynamic f);
+  
+  background: linear-gradient(135deg, #4a69bd 0%, #6c5ce7 100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Remove overlay since gradient background provides sufficient contrast */
+.hero::after {
+  content: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #e0e6ff;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #4a69bd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #3b4f9f;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+}
+
+/* Experience */
+.experience .experience-item {
+  margin-bottom: 40px;
+}
+
+.experience .experience-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #4a69bd;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.experience-item ul {
+  list-style: disc inside;
+  padding-left: 20px;
+  color: #444;
+}
+
+/* Projects */
+.projects .project-item {
+  margin-bottom: 30px;
+}
+
+.projects .project-item h3 {
+  font-size: 1.3rem;
+  color: #4a69bd;
+  margin-bottom: 5px;
+}
+
+.projects .project-item p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Education */
+.education .education-item {
+  margin-bottom: 25px;
+}
+
+.education .education-item h3 {
+  font-size: 1.3rem;
+  color: #4a69bd;
+  margin-bottom: 5px;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skills-list li {
+  background-color: #e9edfc;
+  color: #1f2452;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact p {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.contact-list {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.contact a {
+  color: #4a69bd;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.download-cv {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #4a69bd;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+  background-color: #3b4f9f;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f2452;
+  color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
