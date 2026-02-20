@@ -262,18 +262,22 @@ h1, h2, h3 {
 }
 
 .download-cv {
+  /* Button styling for the CV download link */
   display: inline-block;
-  padding: 8px 20px;
+  margin-top: 15px;
+  padding: 10px 24px;
   background-color: var(--accent-color);
   color: var(--bg-color);
-  border-radius: 4px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .download-cv:hover {
   background-color: var(--accent-hover);
+  color: var(--bg-color);
 }
 
 /* Footer */
@@ -384,7 +388,8 @@ html {
   margin-top: 40px;
   margin-bottom: 10px;
   text-align: center;
-  color: #1f2452;
+  /* Use accent colour to make portfolio subheadings stand out on the dark background */
+  color: var(--accent-color);
 }
 
 /* Responsive design */
