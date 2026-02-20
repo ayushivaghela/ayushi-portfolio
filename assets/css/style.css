@@ -252,7 +252,8 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
-.contact a {
+/* Style contact links, excluding the CV download button to avoid overriding its text colour */
+.contact a:not(.download-cv) {
   color: var(--accent-color);
   text-decoration: none;
 }
