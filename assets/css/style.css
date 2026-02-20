@@ -7,6 +7,20 @@
 */
 
 /* Basic reset and typography */
+/*
+  Colour variables define the dark palette used throughout the site.
+  Adjust these values to fine‑tune the mood of the design.  The
+  accent colours are inspired by modern creative portfolios and
+  scientific data visualisations. */
+:root {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --subtext-color: #94a3b8;
+  --accent-color: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,13 +30,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fb;
+  /* Dark background with contrasting light text */
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 h1, h2, h3 {
   font-weight: 600;
-  color: #1f2452;
+  /* Use the accent colour for headings */
+  color: var(--accent-color);
 }
 
 /* Navigation */
@@ -31,7 +47,8 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  /* Semi‑transparent dark backdrop for navigation */
+  background: rgba(15, 23, 42, 0.8);
   position: fixed;
   width: 100%;
   top: 0;
@@ -42,7 +59,7 @@ h1, h2, h3 {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4a69bd;
+  color: var(--accent-color);
 }
 
 .nav-links {
@@ -53,13 +70,13 @@ h1, h2, h3 {
 
 .nav-links a {
   text-decoration: none;
-  color: #1f2452;
+  color: var(--text-color);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #4a69bd;
+  color: var(--accent-color);
 }
 
 /* Hero Section
@@ -70,8 +87,8 @@ h1, h2, h3 {
    image overlay, the ::after pseudo‑element is removed. */
 .hero {
   height: 100vh;
-  /* Use a diagonal gradient for a modern, dynamic feel */
-  background: linear-gradient(135deg, #4a69bd 0%, #6c5ce7 100%);
+  /* Use a dark diagonal gradient for a modern, dynamic feel */
+  background: linear-gradient(135deg, #0a192f 0%, #1d4ed8 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,22 +111,33 @@ h1, h2, h3 {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--accent-color);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 30px;
-  color: #e0e6ff;
+  color: var(--subtext-color);
+}
+
+/* Style specifically for the hero subtitle inserted below the headline.
+   It inherits the dark palette and constrains the width for optimal
+   readability on large screens. */
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--subtext-color);
+  margin-bottom: 30px;
+  max-width: 800px;
+  text-align: center;
 }
 
 .cta {
   display: inline-block;
   padding: 10px 25px;
-  background-color: #4a69bd;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
@@ -117,7 +145,7 @@ h1, h2, h3 {
 }
 
 .cta:hover {
-  background-color: #3b4f9f;
+  background-color: var(--accent-hover);
 }
 
 /* Sections */
@@ -135,7 +163,7 @@ h1, h2, h3 {
 
 .about p {
   font-size: 1.1rem;
-  color: #444;
+  color: var(--subtext-color);
   text-align: center;
 }
 
@@ -147,19 +175,19 @@ h1, h2, h3 {
 .experience .experience-item h3 {
   font-size: 1.4rem;
   margin-bottom: 5px;
-  color: #4a69bd;
+  color: var(--accent-color);
 }
 
 .date {
   font-size: 0.9rem;
-  color: #777;
+  color: var(--subtext-color);
   margin-bottom: 10px;
 }
 
 .experience-item ul {
   list-style: disc inside;
   padding-left: 20px;
-  color: #444;
+  color: var(--subtext-color);
 }
 
 /* Projects */
@@ -169,13 +197,13 @@ h1, h2, h3 {
 
 .projects .project-item h3 {
   font-size: 1.3rem;
-  color: #4a69bd;
+  color: var(--accent-color);
   margin-bottom: 5px;
 }
 
 .projects .project-item p {
   margin-bottom: 10px;
-  color: #444;
+  color: var(--subtext-color);
 }
 
 /* Education */
@@ -185,7 +213,7 @@ h1, h2, h3 {
 
 .education .education-item h3 {
   font-size: 1.3rem;
-  color: #4a69bd;
+  color: var(--accent-color);
   margin-bottom: 5px;
 }
 
@@ -199,8 +227,8 @@ h1, h2, h3 {
 }
 
 .skills-list li {
-  background-color: #e9edfc;
-  color: #1f2452;
+  background-color: var(--card-bg);
+  color: var(--text-color);
   padding: 8px 12px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -210,7 +238,7 @@ h1, h2, h3 {
 .contact p {
   text-align: center;
   margin-bottom: 15px;
-  color: #444;
+  color: var(--subtext-color);
 }
 
 .contact-list {
@@ -225,7 +253,7 @@ h1, h2, h3 {
 }
 
 .contact a {
-  color: #4a69bd;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -236,8 +264,8 @@ h1, h2, h3 {
 .download-cv {
   display: inline-block;
   padding: 8px 20px;
-  background-color: #4a69bd;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
@@ -245,28 +273,69 @@ h1, h2, h3 {
 }
 
 .download-cv:hover {
-  background-color: #3b4f9f;
+  background-color: var(--accent-hover);
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #1f2452;
-  color: #fff;
+  background-color: #0a192f;
+  color: var(--subtext-color);
+}
+
+/*
+  Enhancements for interactive portfolio
+  --------------------------------------
+  These rules introduce smooth scrolling, scroll-triggered section
+  animations, navigation highlighting and subtle card hover effects.
+*/
+
+/* Enable smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prepare all sections for reveal animations */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When a section becomes visible, fade it in and slide into place */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Highlight the active navigation link as users scroll */
+.nav-links a.active {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Add interactive hover effects to portfolio cards */
+.portfolio .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Highlights & Focus and other simple list sections */
 .highlights ul,
-.focus ul,
-.lab-skills ul,
-.communication ul,
-.looking-for ul,
-.tools ul {
+  .focus ul,
+  .lab-skills ul,
+  .communication ul,
+  .looking-for ul,
+  .tools ul {
   list-style: disc inside;
   margin: 0 auto;
   max-width: 800px;
-  color: #444;
+  color: var(--text-color);
 }
 
 /* Portfolio (Medical Editing & Writing) */
@@ -278,22 +347,23 @@ h1, h2, h3 {
 }
 
 .portfolio .card {
-  background-color: #fff;
+  background-color: var(--card-bg);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio .card h4 {
   font-size: 1.1rem;
-  color: #4a69bd;
+  color: var(--accent-color);
   margin-bottom: 8px;
 }
 
 .portfolio .card .tag {
   display: inline-block;
-  background-color: #e9edfc;
-  color: #4a69bd;
+  background-color: rgba(56, 189, 248, 0.2);
+  color: var(--accent-color);
   padding: 3px 8px;
   border-radius: 12px;
   font-size: 0.75rem;
@@ -301,7 +371,7 @@ h1, h2, h3 {
 }
 
 .portfolio .card a {
-  color: #4a69bd;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
