@@ -1,5 +1,5 @@
 /*
-  Interactive behaviours for Ayushi Vaghela’s portfolio site.
+  Interactive behaviours for Ayushi Vaghela’s portfolio site.
 
   This script uses the IntersectionObserver API to reveal
   sections smoothly as they enter the viewport, and updates
@@ -7,7 +7,22 @@
   one-time observation for performance.
 */
 
+// Load and apply saved theme immediately to prevent flashing
+const savedTheme = localStorage.getItem('theme') || 'teal';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Theme selector dropdown configuration
+  const themeSelect = document.getElementById('theme-select');
+  if (themeSelect) {
+    themeSelect.value = savedTheme;
+    themeSelect.addEventListener('change', (e) => {
+      const selectedTheme = e.target.value;
+      document.documentElement.setAttribute('data-theme', selectedTheme);
+      localStorage.setItem('theme', selectedTheme);
+    });
+  }
+
   // Scroll-triggered reveal of sections
   const sections = document.querySelectorAll('.section');
   const revealObserver = new IntersectionObserver((entries, observer) => {

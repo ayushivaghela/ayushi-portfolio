@@ -12,7 +12,8 @@
   Adjust these values to fine‑tune the mood of the design.  The
   accent colours are inspired by modern creative portfolios and
   scientific data visualisations. */
-:root {
+/* Default Teal */
+:root, html[data-theme="teal"] {
   --bg-color: #0f172a;
   --text-color: #f1f5f9;
   --subtext-color: #94a3b8;
@@ -20,6 +21,50 @@
   --accent-hover: #0ea5e9;
   --card-bg: #1e293b;
   --card-border: #334155;
+}
+
+/* Azure Theme */
+html[data-theme="azure"] {
+  --bg-color: #0a1128;
+  --text-color: #f8f9fa;
+  --subtext-color: #9eafc8;
+  --accent-color: #0077ff;
+  --accent-hover: #0055cc;
+  --card-bg: #101f42;
+  --card-border: #1d3557;
+}
+
+/* Sapphire Theme */
+html[data-theme="sapphire"] {
+  --bg-color: #0b132b;
+  --text-color: #f1f5f9;
+  --subtext-color: #8da9c4;
+  --accent-color: #48cae4;
+  --accent-hover: #00b4d8;
+  --card-bg: #1c2541;
+  --card-border: #3a506b;
+}
+
+/* Cyan Theme */
+html[data-theme="cyan"] {
+  --bg-color: #0f1c24;
+  --text-color: #e0f2fe;
+  --subtext-color: #7dd3fc;
+  --accent-color: #06b6d4;
+  --accent-hover: #0891b2;
+  --card-bg: #162a36;
+  --card-border: #22495e;
+}
+
+/* Navy Theme */
+html[data-theme="navy"] {
+  --bg-color: #050b14;
+  --text-color: #e2e8f0;
+  --subtext-color: #94a3b8;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --card-bg: #0f172a;
+  --card-border: #1e293b;
 }
 * {
   margin: 0;
@@ -54,6 +99,29 @@ h1, h2, h3 {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.theme-select {
+  background: rgba(30, 41, 59, 0.7);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.theme-select:hover {
+  border-color: var(--accent-color);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.theme-select option {
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .logo {
