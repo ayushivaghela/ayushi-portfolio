@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayushi Vaghela – CV</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: A4; margin: 16mm 18mm; }
+    html { font-size: 10.5pt; }
+    body {
+      font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+      color: #1a1a1a;
+      background: #eee;
+      line-height: 1.4;
+    }
+
+    .cv {
+      width: 210mm;
+      margin: 20px auto;
+      background: #fff;
+      padding: 28px 34px 22px;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.06);
+    }
+
+    /* Header */
+    .name {
+      font-size: 20pt;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .contact {
+      text-align: center;
+      font-size: 9.5pt;
+      color: #444;
+      margin-bottom: 12px;
+    }
+    .contact a { color: #1a1a1a; text-decoration: none; }
+    .sep { margin: 0 6px; color: #aaa; }
+
+    /* Sections */
+    .sec-title {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 3px;
+      margin: 14px 0 8px;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 10pt;
+      line-height: 1.5;
+      color: #222;
+    }
+
+    /* Skills */
+    .skills {
+      font-size: 9.8pt;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    /* Jobs */
+    .job { margin-bottom: 12px; page-break-inside: avoid; }
+    .job:last-child { margin-bottom: 0; }
+    .job-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .job-title { font-size: 10.5pt; font-weight: 700; }
+    .job-date { font-size: 9.5pt; font-weight: 600; white-space: nowrap; margin-left: 10px; }
+    .job-org { font-size: 9.5pt; font-style: italic; color: #444; margin-bottom: 3px; }
+    .job ul { margin: 3px 0 0 16px; padding: 0; }
+    .job li { font-size: 9.8pt; color: #222; margin-bottom: 2.5px; line-height: 1.42; }
+
+    /* Education */
+    .edu { margin-bottom: 5px; }
+    .edu-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .edu-deg { font-size: 10.5pt; font-weight: 700; }
+    .edu-date { font-size: 9.5pt; font-weight: 600; white-space: nowrap; margin-left: 10px; }
+    .edu-where { font-size: 9.2pt; color: #444; }
+
+    b { font-weight: 700; }
+
+    @media print {
+      body { background: white; margin: 0; padding: 0; }
+      .cv { width: 100%; margin: 0; padding: 0; box-shadow: none; }
+      .no-print { display: none !important; }
+    }
+    @media screen and (max-width: 800px) {
+      .cv { width: 100%; padding: 20px; }
+    }
+
+    .print-btn {
+      position: fixed; bottom: 24px; right: 24px;
+      background: #1a1a1a; color: #fff; border: none;
+      padding: 10px 22px; border-radius: 6px;
+      font-family: Calibri, Arial, sans-serif; font-size: 10pt; font-weight: 600;
+      cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.15); z-index: 100;
+    }
+    .print-btn:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">⎙ Save as PDF</button>
+
+<div class="cv">
+
+  <div class="name">AYUSHI VAGHELA</div>
+  <div class="contact">
+    London
+    <span class="sep">|</span>
+    <a href="mailto:ayushivaghela18@gmail.com">ayushivaghela18@gmail.com</a>
+    <span class="sep">|</span>
+    <a href="https://ayushivaghela.github.io/ayushi-portfolio/">Portfolio</a>
+    <span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/ayushi-vaghela-076741214">LinkedIn</a>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="sec-title">Summary</div>
+  <div class="summary">
+    <b>Strategic Operations and Engagement Professional</b> driving high-impact initiatives from concept to execution. My career is defined by a unique journey through complex sectors. Backed by an <b>MSc in Cancer Pathology</b>, I first entered the corporate pharmaceutical industry to direct major brand campaigns. I then advanced into strict operational roles enforcing compliance across critical engineering assets. Today I direct <b>large-scale international events</b> and global alumni operations at <b>Warwick Business School</b>. Throughout this journey I have proven my ability to translate complex data into clear commercial communications. I routinely align institutional leaders alongside corporate executives to ensure highly regulated projects run flawlessly. I am seeking a <b>sponsored leadership mandate</b> to drive strategic impact for an industry leader.
+  </div>
+
+  <!-- SKILLS -->
+  <div class="sec-title">Skills</div>
+  <div class="skills">
+    <b>Project Management</b> · <b>Operations Management</b> · <b>Budget Administration</b> · <b>Regulatory Compliance & GDPR</b> · <b>Data Analytics & Reporting</b> · <b>Stakeholder Management</b> · <b>Strategic Communications</b> · <b>Supplier Negotiations</b> · <b>Programme Administration</b> · <b>Opera & CRM Systems</b>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="sec-title">Work Experience</div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Alumni Engagement Officer (MBA)</div>
+      <div class="job-date">Apr 2026 – Present</div>
+    </div>
+    <div class="job-org">Warwick Business School (WBS), University of Warwick</div>
+    <ul>
+      <li>Lead the <b>annual 3-day MBA Conference</b> for <b>300+ alumni</b>, managing a <b>£50,000 budget</b>, <b>10+ speakers</b>, and multi-venue logistics including a gala dinner and networking breakfast</li>
+      <li>Coordinate a large portfolio of <b>suppliers, vendors, and stakeholders</b> (academics, industry leaders, media, caterers) to build and execute seamless conference programming</li>
+      <li>Run the <b>MBA alumni modules programme</b>, using <b>Opera</b> and university systems to manage event bookings, resolve high-volume queries, and handle <b>confidential alumni data</b></li>
+      <li>Deliver <b>marketing and communications</b> campaigns across multiple channels to drive engagement across the <b>global WBS MBA community</b></li>
+      <li>Prepare <b>data-driven metrics and reports</b> to monitor, evaluate, and continuously improve alumni engagement activities</li>
+      <li>Act as the primary <b>point of contact</b> for MBA alumni, collaborating cross-functionally with academic departments and professional services to deliver premium alumni benefits</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Compliance Operations Coordinator</div>
+      <div class="job-date">Sep 2025 – Jan 2026</div>
+    </div>
+    <div class="job-org">WMG (Warwick Manufacturing Group), University of Warwick</div>
+    <ul>
+      <li>Administered the Innaxys <b>asset management database</b>, ensuring rigorous <b>regulatory compliance</b> by verifying certifications from international manufacturers</li>
+      <li>Led the operational tracking of <b>100+ critical equipment and health inspections</b>, coordinating cross-functionally with technicians to enforce adherence to safety standards</li>
+      <li>Optimised project budgeting by maintaining <b>80+ cost codes</b>, significantly improving <b>financial tracking and reporting accuracy</b></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Assessment Operations Assistant</div>
+      <div class="job-date">Jun 2024 – Jul 2024</div>
+    </div>
+    <div class="job-org">University of Leicester</div>
+    <ul>
+      <li>Directed high-stakes <b>OSCE exam operations</b> under strict time constraints, overseeing secure exam distribution, equipment provisioning, and logistical setup</li>
+      <li>Acted as the <b>operational link</b> between faculty and technical teams, coordinating training and <b>Unitemps payments</b> for 120+ patient simulators</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Marketing and Events Assistant</div>
+      <div class="job-date">Jun 2022 – Apr 2024</div>
+    </div>
+    <div class="job-org">AstraZeneca (On-Campus Promotions) – Leicester</div>
+    <ul>
+      <li>Spearheaded <b>corporate marketing strategy</b> across 2 academic years, selected and retained based on exceptional campaign performance</li>
+      <li>Project-managed the end-to-end delivery of <b>8+ high-impact recruitment campaigns</b>, driving <b>200+ registrations</b> and consistently exceeding targets</li>
+      <li>Acted as the <b>brand-facing representative</b>, delivering live presentations and coordinating outreach with careers teams, tutors, and student societies</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Project Coordinator</div>
+      <div class="job-date">Oct 2023 – Dec 2023</div>
+    </div>
+    <div class="job-org">University of Leicester (Career Department)</div>
+    <ul>
+      <li>Supported delivery of <b>employability programmes</b> including <b>industrial placements</b> and <b>micro-internships</b></li>
+      <li>Assisted students with placement applications including <b>CV refinement</b> and <b>interview preparation</b></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Outreach Marketing Coordinator</div>
+      <div class="job-date">Sep 2022 – May 2023</div>
+    </div>
+    <div class="job-org">University of Leicester (Student's Union)</div>
+    <ul>
+      <li>Supported delivery of <b>careers fairs</b> and <b>employability events</b>, managing <b>registrations</b>, <b>attendee flow</b> and on-site coordination</li>
+      <li>Acted as <b>first point of contact</b> for students and employers, handling queries and follow-ups</li>
+      <li>Improved <b>student tracking</b> and <b>post-event communication</b> using <b>JotForms</b></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Marketing Intern (Career Development Services)</div>
+      <div class="job-date">Jul 2022 – Aug 2022</div>
+    </div>
+    <div class="job-org">University of Leicester</div>
+    <ul>
+      <li>Developed the <b>Experiential Maps</b> project, creating a structured student guide for academic and career progression</li>
+      <li>Supported <b>marketing</b> for <b>open days</b> and <b>careers events</b> across digital and on-campus channels</li>
+      <li>Designed materials using <b>Canva</b>, <b>Piktochart</b> and <b>Adobe</b> in line with institutional branding</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-row">
+      <div class="job-title">Campus Marketing Assistant</div>
+      <div class="job-date">Sep 2021 – Dec 2021</div>
+    </div>
+    <div class="job-org">GlaxoSmithKline (On-Campus Promotions) – Leicester</div>
+    <ul>
+      <li>Led <b>GSK's student outreach during COVID-19</b>, organising in-person events for <b>30+ attendees</b> while maintaining full compliance with safety regulations</li>
+      <li>Created and delivered <b>presentations</b> on GSK's career pathways and application process</li>
+      <li>Managed <b>registrations</b> and <b>post-event communication</b> using <b>JotForms</b> and email workflows</li>
+    </ul>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="sec-title">Education</div>
+
+  <div class="edu">
+    <div class="edu-row">
+      <div class="edu-deg">MSc Cancer Molecular Pathology &amp; Therapeutics</div>
+      <div class="edu-date">2023 – 2024</div>
+    </div>
+    <div class="edu-where">University of Leicester – 2.1 (Upper Division Honours)</div>
+  </div>
+
+  <div class="edu">
+    <div class="edu-row">
+      <div class="edu-deg">BSc Medical Genetics</div>
+      <div class="edu-date">2020 – 2023</div>
+    </div>
+    <div class="edu-where">University of Leicester – 2.1 (Upper Division Honours)</div>
+  </div>
+
+</div>
+</body>
+</html>
